@@ -53,6 +53,9 @@ _sections_unfolded = [ "Transform" ]
 
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MonkeyBin"]
 
@@ -76,6 +79,9 @@ _sections_unfolded = [ "Transform" ]
 
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GiraffeBin"]
 
@@ -99,6 +105,9 @@ _sections_unfolded = [ "Transform" ]
 
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RabbitBin"]
 
@@ -122,6 +131,9 @@ _sections_unfolded = [ "Transform" ]
 
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HippoBin"]
 
@@ -131,7 +143,7 @@ shape = SubResource( 4 )
 [node name="Monkey" type="Area2D" parent="."]
 
 editor/display_folded = true
-position = Vector2( -178.6, -278.152 )
+position = Vector2( 436.483, -105.063 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -159,7 +171,7 @@ shape = SubResource( 5 )
 [node name="Giraffe" type="Area2D" parent="."]
 
 editor/display_folded = true
-position = Vector2( -282.406, -278.726 )
+position = Vector2( 332.677, -105.637 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -186,7 +198,7 @@ shape = SubResource( 5 )
 [node name="Rabbit" type="Area2D" parent="."]
 
 editor/display_folded = true
-position = Vector2( -482.35, -277.256 )
+position = Vector2( 132.733, -104.167 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -214,7 +226,7 @@ shape = SubResource( 5 )
 [node name="Hippo" type="Area2D" parent="."]
 
 editor/display_folded = true
-position = Vector2( -384.583, -276.521 )
+position = Vector2( 230.5, -103.432 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -238,5 +250,27 @@ _sections_unfolded = [ "Transform" ]
 visible = false
 scale = Vector2( 0.25, 0.25 )
 shape = SubResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 800.0
+margin_top = 100.0
+margin_right = 879.0
+margin_bottom = 121.0
+rect_scale = Vector2( 5, 5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Score: 0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
 
 
