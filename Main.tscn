@@ -1,0 +1,561 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://graphics/giraffeRound.png" type="Texture" id=2]
+[ext_resource path="res://graphics/rabbitRound.png" type="Texture" id=3]
+[ext_resource path="res://graphics/hippoRound.png" type="Texture" id=4]
+[ext_resource path="res://graphics/monkeyRound.png" type="Texture" id=5]
+[ext_resource path="res://graphics/elementWood024.png" type="Texture" id=6]
+[ext_resource path="res://graphics/arrowSilver_left.png" type="Texture" id=7]
+[ext_resource path="res://Rabbit.gd" type="Script" id=8]
+[ext_resource path="res://graphics/rabbit.png" type="Texture" id=9]
+[ext_resource path="res://Giraffe.gd" type="Script" id=10]
+[ext_resource path="res://graphics/giraffe.png" type="Texture" id=11]
+[ext_resource path="res://Monkey.gd" type="Script" id=12]
+[ext_resource path="res://graphics/monkey.png" type="Texture" id=13]
+[ext_resource path="res://Hippo.gd" type="Script" id=14]
+[ext_resource path="res://graphics/hippo.png" type="Texture" id=15]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 184.462
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 202.449
+
+[sub_resource type="CircleShape2D" id=12]
+
+custom_solver_bias = 0.0
+radius = 182.961
+
+[sub_resource type="CircleShape2D" id=9]
+
+custom_solver_bias = 0.0
+radius = 168.269
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 17.5753, 55.1526 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 17.9119, 54.7857 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 17.9332, 54.6879 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 18.0918, 55.2116 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 141.574, 141.633 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 141.574, 141.633 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 141.574, 141.633 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 141.574, 141.633 )
+
+[node name="Main" type="Node"]
+
+script = ExtResource( 1 )
+
+[node name="GiraffeBin" type="Area2D" parent="." groups=[
+"GiraffeBin",
+]]
+
+editor/display_folded = true
+position = Vector2( 1720, 880 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="GiraffeSprite" type="Sprite" parent="GiraffeBin"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GiraffeBin"]
+
+visible = false
+position = Vector2( 0.307964, 31.9593 )
+scale = Vector2( 0.780214, 0.777259 )
+shape = SubResource( 1 )
+
+[node name="RabbitBin" type="Area2D" parent="." groups=[
+"RabbitBin",
+]]
+
+editor/display_folded = true
+position = Vector2( 200, 880 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RabbitSprite" type="Sprite" parent="RabbitBin"]
+
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RabbitBin"]
+
+visible = false
+position = Vector2( 0.58246, 42.8478 )
+scale = Vector2( 0.703703, 0.70965 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="HippoBin" type="Area2D" parent="." groups=[
+"HippoBin",
+]]
+
+editor/display_folded = true
+position = Vector2( -291.239, 980.422 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="HippoSprite" type="Sprite" parent="HippoBin"]
+
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HippoBin"]
+
+visible = false
+position = Vector2( 0.533487, 3.23672 )
+scale = Vector2( 0.781289, 0.779505 )
+shape = SubResource( 12 )
+
+[node name="MonkeyBin" type="Area2D" parent="." groups=[
+"MonkeyBin",
+]]
+
+editor/display_folded = true
+position = Vector2( -324.429, 596.111 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MonkeySprite" type="Sprite" parent="MonkeyBin"]
+
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MonkeyBin"]
+
+visible = false
+position = Vector2( -0.968177, -0.872125 )
+scale = Vector2( 0.85538, 0.852461 )
+shape = SubResource( 9 )
+
+[node name="Label" type="Label" parent="."]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 800.0
+margin_top = 100.0
+margin_right = 879.0
+margin_bottom = 121.0
+rect_scale = Vector2( 5, 5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Score: 0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="UpWall" type="Area2D" parent="." groups=[
+"Up",
+]]
+
+editor/display_folded = true
+position = Vector2( -120.346, -9.5798 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="UpWallSprite" type="Sprite" parent="UpWall"]
+
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Arrow1" type="Sprite" parent="UpWall"]
+
+position = Vector2( 0, -35 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z" ]
+
+[node name="Arrow2" type="Sprite" parent="UpWall"]
+
+rotation = 1.5708
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z" ]
+
+[node name="Arrow3" type="Sprite" parent="UpWall"]
+
+position = Vector2( 0, 35 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpWall"]
+
+visible = false
+shape = SubResource( 3 )
+
+[node name="LeftWall" type="Area2D" parent="." groups=[
+"Left",
+]]
+
+editor/display_folded = true
+position = Vector2( -176.029, -102.384 )
+rotation = -1.5708
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform", "Z" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="LeftWallSprite" type="Sprite" parent="LeftWall"]
+
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Arrow1" type="Sprite" parent="LeftWall"]
+
+position = Vector2( 0, -35 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z" ]
+
+[node name="Arrow2" type="Sprite" parent="LeftWall"]
+
+rotation = 1.5708
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z" ]
+
+[node name="Arrow3" type="Sprite" parent="LeftWall"]
+
+position = Vector2( 0, 35 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+
+visible = false
+shape = SubResource( 4 )
+
+[node name="RightWall" type="Area2D" parent="." groups=[
+"Right",
+]]
+
+editor/display_folded = true
+position = Vector2( -92.2056, -170.64 )
+rotation = 1.5708
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform", "Z" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RightWallSprite" type="Sprite" parent="RightWall"]
+
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Arrow1" type="Sprite" parent="RightWall"]
+
+position = Vector2( 0, -35 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z" ]
+
+[node name="Arrow2" type="Sprite" parent="RightWall"]
+
+rotation = 1.5708
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z" ]
+
+[node name="Arrow3" type="Sprite" parent="RightWall"]
+
+position = Vector2( 0, 35 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+
+visible = false
+shape = SubResource( 7 )
+
+[node name="DownWall" type="Area2D" parent="." groups=[
+"Down",
+]]
+
+editor/display_folded = true
+position = Vector2( -220.335, -4.7899 )
+rotation = 3.14159
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DownWallSprite" type="Sprite" parent="DownWall"]
+
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Arrow1" type="Sprite" parent="DownWall"]
+
+position = Vector2( 0, -35 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z" ]
+
+[node name="Arrow2" type="Sprite" parent="DownWall"]
+
+rotation = 1.5708
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z" ]
+
+[node name="Arrow3" type="Sprite" parent="DownWall"]
+
+position = Vector2( 0, 35 )
+rotation = 1.5708
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DownWall"]
+
+visible = false
+shape = SubResource( 8 )
+
+[node name="Rabbit" type="Area2D" parent="."]
+
+editor/display_folded = true
+position = Vector2( -231.617, 166.157 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 8 )
+_sections_unfolded = [ "Collision", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SmallRibbitSprite" type="Sprite" parent="Rabbit"]
+
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rabbit"]
+
+visible = false
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 5 )
+
+[node name="Giraffe" type="Area2D" parent="."]
+
+editor/display_folded = true
+position = Vector2( -269.376, -171.192 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SmallGiraffeSprite" type="Sprite" parent="Giraffe"]
+
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Giraffe"]
+
+visible = false
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 6 )
+
+[node name="Monkey" type="Area2D" parent="."]
+
+editor/display_folded = true
+position = Vector2( -437.954, 89.2645 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 12 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SmallMonkeySprite" type="Sprite" parent="Monkey"]
+
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 13 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monkey"]
+
+visible = false
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 10 )
+
+[node name="Hippo" type="Area2D" parent="."]
+
+editor/display_folded = true
+position = Vector2( -398.9, 290.109 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 14 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SmallHippoSprite" type="Sprite" parent="Hippo"]
+
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 15 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hippo"]
+
+visible = false
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 11 )
+
+[node name="RabbitTimer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
+[node name="GiraffeTimer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
+[connection signal="area_entered" from="Rabbit" to="Rabbit" method="_on_Rabbit_area_entered"]
+
+[connection signal="timeout" from="RabbitTimer" to="." method="_on_RabbitTimer_timeout"]
+
+[connection signal="timeout" from="GiraffeTimer" to="." method="_on_GiraffeTimer_timeout"]
+
+
