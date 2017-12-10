@@ -1,20 +1,22 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://graphics/giraffeRound.png" type="Texture" id=2]
 [ext_resource path="res://graphics/rabbitRound.png" type="Texture" id=3]
 [ext_resource path="res://graphics/hippoRound.png" type="Texture" id=4]
 [ext_resource path="res://graphics/monkeyRound.png" type="Texture" id=5]
-[ext_resource path="res://graphics/elementWood024.png" type="Texture" id=6]
-[ext_resource path="res://graphics/arrowSilver_left.png" type="Texture" id=7]
-[ext_resource path="res://Rabbit.gd" type="Script" id=8]
-[ext_resource path="res://graphics/rabbit.png" type="Texture" id=9]
-[ext_resource path="res://Giraffe.gd" type="Script" id=10]
-[ext_resource path="res://graphics/giraffe.png" type="Texture" id=11]
-[ext_resource path="res://Monkey.gd" type="Script" id=12]
-[ext_resource path="res://graphics/monkey.png" type="Texture" id=13]
-[ext_resource path="res://Hippo.gd" type="Script" id=14]
-[ext_resource path="res://graphics/hippo.png" type="Texture" id=15]
+[ext_resource path="res://Score.gd" type="Script" id=6]
+[ext_resource path="res://graphics/elementWood024.png" type="Texture" id=7]
+[ext_resource path="res://graphics/arrowSilver_left.png" type="Texture" id=8]
+[ext_resource path="res://Rabbit.gd" type="Script" id=9]
+[ext_resource path="res://graphics/rabbit.png" type="Texture" id=10]
+[ext_resource path="res://Giraffe.gd" type="Script" id=11]
+[ext_resource path="res://graphics/giraffe.png" type="Texture" id=12]
+[ext_resource path="res://Monkey.gd" type="Script" id=13]
+[ext_resource path="res://graphics/monkey.png" type="Texture" id=14]
+[ext_resource path="res://Hippo.gd" type="Script" id=15]
+[ext_resource path="res://graphics/hippo.png" type="Texture" id=16]
+[ext_resource path="res://graphics/you_win.png" type="Texture" id=17]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -26,22 +28,22 @@ radius = 184.462
 custom_solver_bias = 0.0
 radius = 202.449
 
-[sub_resource type="CircleShape2D" id=12]
+[sub_resource type="CircleShape2D" id=3]
 
 custom_solver_bias = 0.0
 radius = 182.961
 
-[sub_resource type="CircleShape2D" id=9]
+[sub_resource type="CircleShape2D" id=4]
 
 custom_solver_bias = 0.0
 radius = 168.269
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 17.5753, 55.1526 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 17.9119, 54.7857 )
@@ -56,12 +58,7 @@ extents = Vector2( 17.9332, 54.6879 )
 custom_solver_bias = 0.0
 extents = Vector2( 18.0918, 55.2116 )
 
-[sub_resource type="RectangleShape2D" id=5]
-
-custom_solver_bias = 0.0
-extents = Vector2( 141.574, 141.633 )
-
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
 extents = Vector2( 141.574, 141.633 )
@@ -72,6 +69,11 @@ custom_solver_bias = 0.0
 extents = Vector2( 141.574, 141.633 )
 
 [sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 141.574, 141.633 )
+
+[sub_resource type="RectangleShape2D" id=12]
 
 custom_solver_bias = 0.0
 extents = Vector2( 141.574, 141.633 )
@@ -91,9 +93,10 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 2
 audio_bus_override = false
 audio_bus_name = "Master"
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -121,9 +124,10 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 2
 audio_bus_override = false
 audio_bus_name = "Master"
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -152,9 +156,10 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 2
 audio_bus_override = false
 audio_bus_name = "Master"
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -169,7 +174,7 @@ _sections_unfolded = [ "Transform" ]
 visible = false
 position = Vector2( 0.533487, 3.23672 )
 scale = Vector2( 0.781289, 0.779505 )
-shape = SubResource( 12 )
+shape = SubResource( 3 )
 
 [node name="MonkeyBin" type="Area2D" parent="." groups=[
 "MonkeyBin",
@@ -182,9 +187,10 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 2
 audio_bus_override = false
 audio_bus_name = "Master"
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -199,9 +205,9 @@ _sections_unfolded = [ "Transform" ]
 visible = false
 position = Vector2( -0.968177, -0.872125 )
 scale = Vector2( 0.85538, 0.852461 )
-shape = SubResource( 9 )
+shape = SubResource( 4 )
 
-[node name="Label" type="Label" parent="."]
+[node name="ScoreLabel" type="Label" parent="."]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -221,6 +227,7 @@ text = "Score: 0"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script = ExtResource( 6 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="UpWall" type="Area2D" parent="." groups=[
@@ -244,33 +251,33 @@ __meta__ = {
 [node name="UpWallSprite" type="Sprite" parent="UpWall"]
 
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Arrow1" type="Sprite" parent="UpWall"]
 
 position = Vector2( 0, -35 )
 rotation = 1.5708
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="Arrow2" type="Sprite" parent="UpWall"]
 
 rotation = 1.5708
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="Arrow3" type="Sprite" parent="UpWall"]
 
 position = Vector2( 0, 35 )
 rotation = 1.5708
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpWall"]
 
 visible = false
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="LeftWall" type="Area2D" parent="." groups=[
 "Left",
@@ -294,33 +301,33 @@ __meta__ = {
 [node name="LeftWallSprite" type="Sprite" parent="LeftWall"]
 
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Arrow1" type="Sprite" parent="LeftWall"]
 
 position = Vector2( 0, -35 )
 rotation = 1.5708
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="Arrow2" type="Sprite" parent="LeftWall"]
 
 rotation = 1.5708
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="Arrow3" type="Sprite" parent="LeftWall"]
 
 position = Vector2( 0, 35 )
 rotation = 1.5708
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
 
 visible = false
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="RightWall" type="Area2D" parent="." groups=[
 "Right",
@@ -344,27 +351,27 @@ __meta__ = {
 [node name="RightWallSprite" type="Sprite" parent="RightWall"]
 
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Arrow1" type="Sprite" parent="RightWall"]
 
 position = Vector2( 0, -35 )
 rotation = 1.5708
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="Arrow2" type="Sprite" parent="RightWall"]
 
 rotation = 1.5708
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="Arrow3" type="Sprite" parent="RightWall"]
 
 position = Vector2( 0, 35 )
 rotation = 1.5708
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
@@ -394,27 +401,27 @@ __meta__ = {
 [node name="DownWallSprite" type="Sprite" parent="DownWall"]
 
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Arrow1" type="Sprite" parent="DownWall"]
 
 position = Vector2( 0, -35 )
 rotation = 1.5708
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="Arrow2" type="Sprite" parent="DownWall"]
 
 rotation = 1.5708
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="Arrow3" type="Sprite" parent="DownWall"]
 
 position = Vector2( 0, 35 )
 rotation = 1.5708
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DownWall"]
@@ -431,9 +438,10 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_mask = 2
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
@@ -442,14 +450,14 @@ __meta__ = {
 [node name="SmallRibbitSprite" type="Sprite" parent="Rabbit"]
 
 scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rabbit"]
 
 visible = false
 scale = Vector2( 0.25, 0.25 )
-shape = SubResource( 5 )
+shape = SubResource( 9 )
 
 [node name="Giraffe" type="Area2D" parent="."]
 
@@ -460,10 +468,11 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_mask = 2
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 10 )
-_sections_unfolded = [ "Transform" ]
+script = ExtResource( 11 )
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -471,14 +480,14 @@ __meta__ = {
 [node name="SmallGiraffeSprite" type="Sprite" parent="Giraffe"]
 
 scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Giraffe"]
 
 visible = false
 scale = Vector2( 0.25, 0.25 )
-shape = SubResource( 6 )
+shape = SubResource( 10 )
 
 [node name="Monkey" type="Area2D" parent="."]
 
@@ -489,10 +498,11 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_mask = 2
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 12 )
-_sections_unfolded = [ "Transform" ]
+script = ExtResource( 13 )
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -500,14 +510,14 @@ __meta__ = {
 [node name="SmallMonkeySprite" type="Sprite" parent="Monkey"]
 
 scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Monkey"]
 
 visible = false
 scale = Vector2( 0.25, 0.25 )
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="Hippo" type="Area2D" parent="."]
 
@@ -518,10 +528,11 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_mask = 2
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 14 )
-_sections_unfolded = [ "Transform" ]
+script = ExtResource( 15 )
+_sections_unfolded = [ "Collision", "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -529,14 +540,14 @@ __meta__ = {
 [node name="SmallHippoSprite" type="Sprite" parent="Hippo"]
 
 scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hippo"]
 
 visible = false
 scale = Vector2( 0.25, 0.25 )
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="RabbitTimer" type="Timer" parent="."]
 
@@ -552,7 +563,20 @@ wait_time = 2.0
 one_shot = false
 autostart = true
 
+[node name="WinScreen" type="Sprite" parent="."]
+
+visible = false
+position = Vector2( 960, 540 )
+texture = ExtResource( 17 )
+_sections_unfolded = [ "Transform" ]
+
 [connection signal="area_entered" from="Rabbit" to="Rabbit" method="_on_Rabbit_area_entered"]
+
+[connection signal="area_entered" from="Giraffe" to="Giraffe" method="_on_Giraffe_area_entered"]
+
+[connection signal="area_entered" from="Monkey" to="Monkey" method="_on_Monkey_area_entered"]
+
+[connection signal="area_entered" from="Hippo" to="Hippo" method="_on_Hippo_area_entered"]
 
 [connection signal="timeout" from="RabbitTimer" to="." method="_on_RabbitTimer_timeout"]
 

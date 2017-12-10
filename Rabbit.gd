@@ -41,4 +41,14 @@ func _on_Rabbit_area_entered( area ):
 		rabbitDown = false
 		rabbitLeft = false
 	if area.is_in_group("RabbitBin"):
-		
+		self.queue_free()
+		$"../ScoreLabel".increase_score()
+	if area.is_in_group("GiraffeBin"):
+		self.queue_free()
+		$"../ScoreLabel".decrease_score()
+	if area.is_in_group("MonkeyBin"):
+		self.queue_free()
+		$"../ScoreLabel".decrease_score()
+	if area.is_in_group("HippoBin"):
+		self.queue_free()
+		$"../ScoreLabel".decrease_score()
