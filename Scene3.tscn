@@ -152,7 +152,7 @@ _sections_unfolded = [ "Transform" ]
 ]]
 
 editor/display_folded = true
-position = Vector2( -1063.79, -222.431 )
+position = Vector2( 100, 100 )
 scale = Vector2( 0.5, 0.5 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -184,7 +184,7 @@ shape = SubResource( 3 )
 ]]
 
 editor/display_folded = true
-position = Vector2( -823.299, -366.259 )
+position = Vector2( 1180, 100 )
 scale = Vector2( 0.5, 0.5 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
