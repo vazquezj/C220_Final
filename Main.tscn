@@ -87,7 +87,8 @@ script = ExtResource( 1 )
 ]]
 
 editor/display_folded = true
-position = Vector2( 1720, 880 )
+position = Vector2( 1180, 620 )
+scale = Vector2( 0.5, 0.5 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -118,7 +119,8 @@ shape = SubResource( 1 )
 ]]
 
 editor/display_folded = true
-position = Vector2( 200, 880 )
+position = Vector2( 100, 620 )
+scale = Vector2( 0.5, 0.5 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -150,7 +152,8 @@ _sections_unfolded = [ "Transform" ]
 ]]
 
 editor/display_folded = true
-position = Vector2( -291.239, 980.422 )
+position = Vector2( -1090.22, 666.932 )
+scale = Vector2( 0.5, 0.5 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -181,7 +184,8 @@ shape = SubResource( 3 )
 ]]
 
 editor/display_folded = true
-position = Vector2( -324.429, 596.111 )
+position = Vector2( -732.424, 295.962 )
+scale = Vector2( 0.5, 0.5 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -213,10 +217,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 800.0
-margin_top = 100.0
-margin_right = 879.0
-margin_bottom = 121.0
+margin_left = 540.0
+margin_top = 50.0
+margin_right = 615.0
+margin_bottom = 70.0
 rect_scale = Vector2( 5, 5 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -228,14 +232,14 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 script = ExtResource( 6 )
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Mouse", "Rect", "custom_fonts" ]
 
 [node name="UpWall" type="Area2D" parent="." groups=[
 "Up",
 ]]
 
 editor/display_folded = true
-position = Vector2( -120.346, -9.5798 )
+position = Vector2( -469.035, -207.635 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -284,7 +288,7 @@ shape = SubResource( 5 )
 ]]
 
 editor/display_folded = true
-position = Vector2( -176.029, -102.384 )
+position = Vector2( -524.718, -300.439 )
 rotation = -1.5708
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -334,7 +338,7 @@ shape = SubResource( 6 )
 ]]
 
 editor/display_folded = true
-position = Vector2( -92.2056, -170.64 )
+position = Vector2( -440.895, -368.695 )
 rotation = 1.5708
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -384,7 +388,7 @@ shape = SubResource( 7 )
 ]]
 
 editor/display_folded = true
-position = Vector2( -220.335, -4.7899 )
+position = Vector2( -569.024, -202.845 )
 rotation = 3.14159
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -549,14 +553,7 @@ visible = false
 scale = Vector2( 0.25, 0.25 )
 shape = SubResource( 12 )
 
-[node name="RabbitTimer" type="Timer" parent="."]
-
-process_mode = 1
-wait_time = 2.0
-one_shot = false
-autostart = true
-
-[node name="GiraffeTimer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="."]
 
 process_mode = 1
 wait_time = 2.0
@@ -565,8 +562,7 @@ autostart = true
 
 [node name="WinScreen" type="Sprite" parent="."]
 
-visible = false
-position = Vector2( 960, 540 )
+position = Vector2( 640, 360 )
 texture = ExtResource( 17 )
 _sections_unfolded = [ "Transform" ]
 
@@ -578,8 +574,6 @@ _sections_unfolded = [ "Transform" ]
 
 [connection signal="area_entered" from="Hippo" to="Hippo" method="_on_Hippo_area_entered"]
 
-[connection signal="timeout" from="RabbitTimer" to="." method="_on_RabbitTimer_timeout"]
-
-[connection signal="timeout" from="GiraffeTimer" to="." method="_on_GiraffeTimer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 
