@@ -233,6 +233,7 @@ lines_skipped = 0
 max_lines_visible = -1
 script = ExtResource( 6 )
 _sections_unfolded = [ "Mouse", "Rect", "custom_fonts" ]
+scene = 1
 
 [node name="UpWall" type="Area2D" parent="." groups=[
 "Up",
